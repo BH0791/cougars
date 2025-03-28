@@ -1,0 +1,29 @@
+<configuration>
+
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>src/main/kotlin/logs/app.log</file>
+        <append>true</append>
+        <encoder>
+            <pattern>%d{dd-MM-YYYY HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %green(%msg%n)</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- Archivage quotidien -->
+            <fileNamePattern>logs/app-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!-- Garde les 30 derniers fichiers de log -->
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+    </appender>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%highlight(%-5level){FATAL=red, ERROR=red, WARN=yellow, INFO=green, DEBUG=cyan, TRACE=blue}  %yellow(%d{dd-MM-yyyy HH:mm:ss}) %red(%-5level) %logger{36} - %green(%msg%n) </pattern>
+        </encoder>
+    </appender>
+
+    <root level="trace">
+        <appender-ref ref="FILE"/>
+        <appender-ref ref="STDOUT"/>
+    </root>
+    <logger name="org.eclipse.jetty" level="INFO"/>
+    <logger name="io.netty" level="INFO"/>
+</configuration>
