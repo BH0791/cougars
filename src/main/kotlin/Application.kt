@@ -2,10 +2,7 @@ package fr.hamtec
 
 import com.auth0.jwt.JWT
 import com.auth0.jwt.algorithms.Algorithm
-import fr.hamtec.plugins.configureAuthentication
-import fr.hamtec.plugins.configureContentNegotiation
-import fr.hamtec.plugins.configureRequestValidation
-import fr.hamtec.plugins.configureStatusPages
+import fr.hamtec.plugins.*
 import io.github.cdimascio.dotenv.Dotenv
 import io.ktor.server.application.*
 import io.ktor.server.cio.*
@@ -22,6 +19,7 @@ fun Application.module() {
     configureRequestValidation()
     configureStatusPages()
     configureAuthentication()
+    configureWebSockets()
 
     genToken()
 

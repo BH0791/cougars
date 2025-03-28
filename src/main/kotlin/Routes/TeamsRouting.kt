@@ -53,6 +53,7 @@ fun Application.configureTeamsRouting() {
             call.respond(HttpStatusCode.OK, team.id)
             logResponseHeaders(call)
         }
+        //*Pour une authentification Basic -> Attention ne pas utiliser en temps que JWT
 //        authenticate("auth-basic") {
 //
 //            get("/fichier") {
@@ -89,9 +90,7 @@ fun Application.configureTeamsRouting() {
                 call.respond(HttpStatusCode.Unauthorized)
             }
         }
-
-
-
+//*curl -X GET http://127.0.0.1:8080/hello -H "Authorization: Bearer <mettreVotreToken>"
         authenticate {
             get("/hello") {
             logHeaders(call)

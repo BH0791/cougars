@@ -5961,4 +5961,495 @@ Routing resolve result:
 [0;39m28-03-2025 14:50:07.165 [DefaultDispatcher-worker-1] INFO  Application - [32m***** Request Header: Accept - [*/*]
 [0;39m28-03-2025 14:50:07.169 [DefaultDispatcher-worker-1] TRACE i.k.s.p.c.ContentNegotiation - [32mSkipping response body transformation from String to OutgoingContent for the GET /hello request because the String type is ignored. See [ContentNegotiationConfig::ignoreType].
 [0;39m28-03-2025 14:50:07.174 [DefaultDispatcher-worker-1] TRACE i.k.s.p.statuspages.StatusPages - [32mNo handler found for status code 200 OK for call: /hello
+[0;39m28-03-2025 16:13:06.712 [main] INFO  Application - [32mAutoreload is disabled because the development mode is off.
+[0;39m28-03-2025 16:13:06.882 [main] INFO  HTTPLogger - [32m+++++ Entrée +++++
+[0;39m28-03-2025 16:13:07.193 [main] INFO  Application - [32mApplication started in 0.803 seconds.
+[0;39m28-03-2025 16:13:07.278 [DefaultDispatcher-worker-4] INFO  Application - [32mResponding at http://127.0.0.1:8080
+[0;39m28-03-2025 16:16:00.127 [DefaultDispatcher-worker-1] TRACE io.ktor.server.websocket.WebSockets - [32mShutdown WebSockets due to application stop
+[0;39m28-03-2025 16:16:06.459 [main] INFO  Application - [32mAutoreload is disabled because the development mode is off.
+[0;39m28-03-2025 16:16:06.626 [main] INFO  HTTPLogger - [32m+++++ Entrée +++++
+[0;39m28-03-2025 16:16:06.956 [main] INFO  Application - [32mApplication started in 0.831 seconds.
+[0;39m28-03-2025 16:16:07.017 [DefaultDispatcher-worker-5] INFO  Application - [32mResponding at http://127.0.0.1:8080
+[0;39m28-03-2025 16:18:57.198 [DefaultDispatcher-worker-4] TRACE io.ktor.server.websocket.WebSockets - [32mShutdown WebSockets due to application stop
+[0;39m28-03-2025 16:19:03.412 [main] INFO  Application - [32mAutoreload is disabled because the development mode is off.
+[0;39m28-03-2025 16:19:03.584 [main] INFO  HTTPLogger - [32m+++++ Entrée +++++
+[0;39m28-03-2025 16:19:03.892 [main] INFO  Application - [32mApplication started in 0.819 seconds.
+[0;39m28-03-2025 16:19:03.949 [DefaultDispatcher-worker-5] INFO  Application - [32mResponding at http://127.0.0.1:8080
+[0;39m28-03-2025 16:23:08.361 [DefaultDispatcher-worker-4] TRACE io.ktor.server.routing.Routing - [32mTrace for [socket.io, ]
+/, segment:0 -> SUCCESS @ /
+  /hello, segment:0 -> FAILURE "Selector didn't match" @ /hello
+Matched routes:
+  No results
+Routing resolve result:
+  FAILURE "No matched subtrees found" @ /
+[0;39m28-03-2025 16:23:08.367 [DefaultDispatcher-worker-4] TRACE i.k.s.p.c.ContentNegotiation - [32mSkipping response body transformation from HttpStatusCode to OutgoingContent for the GET /socket.io/?EIO=4&transport=websocket request because the HttpStatusCode type is ignored. See [ContentNegotiationConfig::ignoreType].
+[0;39m28-03-2025 16:23:08.369 [DefaultDispatcher-worker-4] TRACE i.k.s.p.statuspages.StatusPages - [32mNo handler found for status code 404 Not Found for call: /socket.io/?EIO=4&transport=websocket
+[0;39m28-03-2025 16:25:47.210 [DefaultDispatcher-worker-1] TRACE io.ktor.server.routing.Routing - [32mTrace for [hello]
+/, segment:0 -> SUCCESS @ /
+  /hello, segment:1 -> SUCCESS @ /hello
+    /hello/(method:GET), segment:1 -> SUCCESS @ /hello/(method:GET)
+      /hello/(method:GET)/(header:Connection = Upgrade), segment:1 -> SUCCESS @ /hello/(method:GET)/(header:Connection = Upgrade)
+        /hello/(method:GET)/(header:Connection = Upgrade)/(header:Upgrade = websocket), segment:1 -> SUCCESS @ /hello/(method:GET)/(header:Connection = Upgrade)/(header:Upgrade = websocket)
+Matched routes:
+  "" -> "hello" -> "(method:GET)" -> "(header:Connection = Upgrade)" -> "(header:Upgrade = websocket)"
+Routing resolve result:
+  SUCCESS @ /hello/(method:GET)/(header:Connection = Upgrade)/(header:Upgrade = websocket)
+[0;39m28-03-2025 16:25:47.253 [DefaultDispatcher-worker-1] TRACE i.k.s.p.c.ContentNegotiation - [32mSkipping because body is already converted.
+[0;39m28-03-2025 16:25:47.254 [DefaultDispatcher-worker-1] TRACE i.k.s.p.statuspages.StatusPages - [32mNo handler found for status code 101 Switching Protocols for call: /hello
+[0;39m28-03-2025 16:25:47.298 [DefaultDispatcher-worker-1] TRACE io.ktor.websocket.WebSocket - [32mStarting default WebSocketSession(io.ktor.websocket.DefaultWebSocketSessionImpl@4029b9b6) with negotiated extensions: 
+[0;39m28-03-2025 16:25:47.303 [DefaultDispatcher-worker-5] TRACE io.ktor.websocket.WebSocket - [32mStarting WebSocket pinger coroutine with period 5000 ms and timeout 60000 ms
+[0;39m28-03-2025 16:25:47.328 [DefaultDispatcher-worker-1] TRACE io.ktor.server.websocket.WebSockets - [32mStarting websocket session for /hello
+[0;39m28-03-2025 16:25:47.330 [DefaultDispatcher-worker-1] TRACE io.ktor.websocket.WebSocket - [32mSending Frame TEXT (fin=true, buffer len = 5) from session io.ktor.websocket.DefaultWebSocketSessionImpl@4029b9b6
+[0;39m28-03-2025 16:25:47.350 [DefaultDispatcher-worker-8] TRACE io.ktor.websocket.WebSocket - [32mSending Frame CLOSE (fin=true, buffer len = 2) from session io.ktor.websocket.DefaultWebSocketSessionImpl@4029b9b6
+[0;39m28-03-2025 16:25:47.352 [DefaultDispatcher-worker-8] TRACE io.ktor.websocket.WebSocket - [32mSending Close Sequence for session io.ktor.websocket.DefaultWebSocketSessionImpl@4029b9b6 with reason CloseReason(reason=NORMAL, message=) and exception null
+[0;39m28-03-2025 16:26:32.751 [DefaultDispatcher-worker-3] TRACE io.ktor.server.websocket.WebSockets - [32mShutdown WebSockets due to application stop
+[0;39m28-03-2025 16:26:50.254 [main] INFO  Application - [32mAutoreload is disabled because the development mode is off.
+[0;39m28-03-2025 16:26:50.425 [main] INFO  HTTPLogger - [32m+++++ Entrée +++++
+[0;39m28-03-2025 16:26:50.750 [main] INFO  Application - [32mApplication started in 0.819 seconds.
+[0;39m28-03-2025 16:26:50.804 [DefaultDispatcher-worker-5] INFO  Application - [32mResponding at http://127.0.0.1:8080
+[0;39m28-03-2025 16:26:57.914 [DefaultDispatcher-worker-2] TRACE io.ktor.server.routing.Routing - [32mTrace for [hello]
+/, segment:0 -> SUCCESS @ /
+  /hello, segment:1 -> SUCCESS @ /hello
+    /hello/(method:GET), segment:1 -> SUCCESS @ /hello/(method:GET)
+      /hello/(method:GET)/(header:Connection = Upgrade), segment:1 -> SUCCESS @ /hello/(method:GET)/(header:Connection = Upgrade)
+        /hello/(method:GET)/(header:Connection = Upgrade)/(header:Upgrade = websocket), segment:1 -> SUCCESS @ /hello/(method:GET)/(header:Connection = Upgrade)/(header:Upgrade = websocket)
+Matched routes:
+  "" -> "hello" -> "(method:GET)" -> "(header:Connection = Upgrade)" -> "(header:Upgrade = websocket)"
+Routing resolve result:
+  SUCCESS @ /hello/(method:GET)/(header:Connection = Upgrade)/(header:Upgrade = websocket)
+[0;39m28-03-2025 16:26:57.956 [DefaultDispatcher-worker-2] TRACE i.k.s.p.c.ContentNegotiation - [32mSkipping because body is already converted.
+[0;39m28-03-2025 16:26:57.958 [DefaultDispatcher-worker-2] TRACE i.k.s.p.statuspages.StatusPages - [32mNo handler found for status code 101 Switching Protocols for call: /hello
+[0;39m28-03-2025 16:26:57.982 [DefaultDispatcher-worker-3] TRACE io.ktor.websocket.WebSocket - [32mStarting default WebSocketSession(io.ktor.websocket.DefaultWebSocketSessionImpl@19364283) with negotiated extensions: 
+[0;39m28-03-2025 16:26:57.985 [DefaultDispatcher-worker-9] TRACE io.ktor.websocket.WebSocket - [32mStarting WebSocket pinger coroutine with period 5000 ms and timeout 60000 ms
+[0;39m28-03-2025 16:26:57.988 [DefaultDispatcher-worker-3] TRACE io.ktor.server.websocket.WebSockets - [32mStarting websocket session for /hello
+[0;39m28-03-2025 16:26:57.990 [DefaultDispatcher-worker-3] TRACE io.ktor.websocket.WebSocket - [32mSending Frame TEXT (fin=true, buffer len = 5) from session io.ktor.websocket.DefaultWebSocketSessionImpl@19364283
+[0;39m28-03-2025 16:26:58.001 [DefaultDispatcher-worker-1] TRACE io.ktor.websocket.WebSocket - [32mSending Frame CLOSE (fin=true, buffer len = 2) from session io.ktor.websocket.DefaultWebSocketSessionImpl@19364283
+[0;39m28-03-2025 16:26:58.002 [DefaultDispatcher-worker-1] TRACE io.ktor.websocket.WebSocket - [32mSending Close Sequence for session io.ktor.websocket.DefaultWebSocketSessionImpl@19364283 with reason CloseReason(reason=NORMAL, message=) and exception null
+[0;39m28-03-2025 16:28:23.808 [DefaultDispatcher-worker-11] TRACE io.ktor.server.websocket.WebSockets - [32mShutdown WebSockets due to application stop
+[0;39m28-03-2025 16:28:29.847 [main] INFO  Application - [32mAutoreload is disabled because the development mode is off.
+[0;39m28-03-2025 16:28:30.046 [main] INFO  HTTPLogger - [32m+++++ Entrée +++++
+[0;39m28-03-2025 16:28:30.371 [main] INFO  Application - [32mApplication started in 0.852 seconds.
+[0;39m28-03-2025 16:28:30.432 [DefaultDispatcher-worker-5] INFO  Application - [32mResponding at http://127.0.0.1:8080
+[0;39m28-03-2025 16:28:33.940 [DefaultDispatcher-worker-2] TRACE io.ktor.server.routing.Routing - [32mTrace for [hello]
+/, segment:0 -> SUCCESS @ /
+  /hello, segment:1 -> SUCCESS @ /hello
+    /hello/(method:GET), segment:1 -> SUCCESS @ /hello/(method:GET)
+      /hello/(method:GET)/(header:Connection = Upgrade), segment:1 -> SUCCESS @ /hello/(method:GET)/(header:Connection = Upgrade)
+        /hello/(method:GET)/(header:Connection = Upgrade)/(header:Upgrade = websocket), segment:1 -> SUCCESS @ /hello/(method:GET)/(header:Connection = Upgrade)/(header:Upgrade = websocket)
+Matched routes:
+  "" -> "hello" -> "(method:GET)" -> "(header:Connection = Upgrade)" -> "(header:Upgrade = websocket)"
+Routing resolve result:
+  SUCCESS @ /hello/(method:GET)/(header:Connection = Upgrade)/(header:Upgrade = websocket)
+[0;39m28-03-2025 16:28:33.961 [DefaultDispatcher-worker-2] TRACE i.k.s.p.c.ContentNegotiation - [32mSkipping because body is already converted.
+[0;39m28-03-2025 16:28:33.963 [DefaultDispatcher-worker-2] TRACE i.k.s.p.statuspages.StatusPages - [32mNo handler found for status code 101 Switching Protocols for call: /hello
+[0;39m28-03-2025 16:28:34.003 [DefaultDispatcher-worker-1] TRACE io.ktor.websocket.WebSocket - [32mStarting default WebSocketSession(io.ktor.websocket.DefaultWebSocketSessionImpl@2e549e01) with negotiated extensions: 
+[0;39m28-03-2025 16:28:34.006 [DefaultDispatcher-worker-8] TRACE io.ktor.websocket.WebSocket - [32mStarting WebSocket pinger coroutine with period 5000 ms and timeout 60000 ms
+[0;39m28-03-2025 16:28:34.008 [DefaultDispatcher-worker-1] TRACE io.ktor.server.websocket.WebSockets - [32mStarting websocket session for /hello
+[0;39m28-03-2025 16:28:34.011 [DefaultDispatcher-worker-1] TRACE io.ktor.websocket.WebSocket - [32mSending Frame TEXT (fin=true, buffer len = 5) from session io.ktor.websocket.DefaultWebSocketSessionImpl@2e549e01
+[0;39m28-03-2025 16:28:34.023 [DefaultDispatcher-worker-8] TRACE io.ktor.websocket.WebSocket - [32mSending Frame CLOSE (fin=true, buffer len = 2) from session io.ktor.websocket.DefaultWebSocketSessionImpl@2e549e01
+[0;39m28-03-2025 16:28:34.024 [DefaultDispatcher-worker-8] TRACE io.ktor.websocket.WebSocket - [32mSending Close Sequence for session io.ktor.websocket.DefaultWebSocketSessionImpl@2e549e01 with reason CloseReason(reason=NORMAL, message=) and exception null
+[0;39m28-03-2025 16:31:00.020 [DefaultDispatcher-worker-11] TRACE io.ktor.server.routing.Routing - [32mTrace for [hello]
+/, segment:0 -> SUCCESS @ /
+  /hello, segment:1 -> SUCCESS @ /hello
+    /hello/(method:GET), segment:1 -> SUCCESS @ /hello/(method:GET)
+      /hello/(method:GET)/(header:Connection = Upgrade), segment:1 -> SUCCESS @ /hello/(method:GET)/(header:Connection = Upgrade)
+        /hello/(method:GET)/(header:Connection = Upgrade)/(header:Upgrade = websocket), segment:1 -> SUCCESS @ /hello/(method:GET)/(header:Connection = Upgrade)/(header:Upgrade = websocket)
+Matched routes:
+  "" -> "hello" -> "(method:GET)" -> "(header:Connection = Upgrade)" -> "(header:Upgrade = websocket)"
+Routing resolve result:
+  SUCCESS @ /hello/(method:GET)/(header:Connection = Upgrade)/(header:Upgrade = websocket)
+[0;39m28-03-2025 16:31:00.022 [DefaultDispatcher-worker-11] TRACE i.k.s.p.c.ContentNegotiation - [32mSkipping because body is already converted.
+[0;39m28-03-2025 16:31:00.022 [DefaultDispatcher-worker-11] TRACE i.k.s.p.statuspages.StatusPages - [32mNo handler found for status code 101 Switching Protocols for call: /hello
+[0;39m28-03-2025 16:31:00.024 [DefaultDispatcher-worker-6] TRACE io.ktor.websocket.WebSocket - [32mStarting default WebSocketSession(io.ktor.websocket.DefaultWebSocketSessionImpl@11ada408) with negotiated extensions: 
+[0;39m28-03-2025 16:31:00.024 [DefaultDispatcher-worker-7] TRACE io.ktor.websocket.WebSocket - [32mStarting WebSocket pinger coroutine with period 5000 ms and timeout 60000 ms
+[0;39m28-03-2025 16:31:00.024 [DefaultDispatcher-worker-6] TRACE io.ktor.server.websocket.WebSockets - [32mStarting websocket session for /hello
+[0;39m28-03-2025 16:31:00.025 [DefaultDispatcher-worker-6] TRACE io.ktor.websocket.WebSocket - [32mSending Frame TEXT (fin=true, buffer len = 5) from session io.ktor.websocket.DefaultWebSocketSessionImpl@11ada408
+[0;39m28-03-2025 16:31:00.044 [DefaultDispatcher-worker-2] TRACE io.ktor.websocket.WebSocket - [32mSending Frame CLOSE (fin=true, buffer len = 43) from session io.ktor.websocket.DefaultWebSocketSessionImpl@11ada408
+[0;39m28-03-2025 16:31:00.044 [DefaultDispatcher-worker-2] TRACE io.ktor.websocket.WebSocket - [32mSending Close Sequence for session io.ktor.websocket.DefaultWebSocketSessionImpl@11ada408 with reason CloseReason(reason=CLOSED_ABNORMALLY, message=Connection was closed without close frame) and exception null
+[0;39m28-03-2025 16:31:29.213 [DefaultDispatcher-worker-9] TRACE io.ktor.server.routing.Routing - [32mTrace for [hello]
+/, segment:0 -> SUCCESS @ /
+  /hello, segment:1 -> SUCCESS @ /hello
+    /hello/(method:GET), segment:1 -> SUCCESS @ /hello/(method:GET)
+      /hello/(method:GET)/(header:Connection = Upgrade), segment:1 -> SUCCESS @ /hello/(method:GET)/(header:Connection = Upgrade)
+        /hello/(method:GET)/(header:Connection = Upgrade)/(header:Upgrade = websocket), segment:1 -> SUCCESS @ /hello/(method:GET)/(header:Connection = Upgrade)/(header:Upgrade = websocket)
+Matched routes:
+  "" -> "hello" -> "(method:GET)" -> "(header:Connection = Upgrade)" -> "(header:Upgrade = websocket)"
+Routing resolve result:
+  SUCCESS @ /hello/(method:GET)/(header:Connection = Upgrade)/(header:Upgrade = websocket)
+[0;39m28-03-2025 16:31:29.214 [DefaultDispatcher-worker-9] TRACE i.k.s.p.c.ContentNegotiation - [32mSkipping because body is already converted.
+[0;39m28-03-2025 16:31:29.215 [DefaultDispatcher-worker-9] TRACE i.k.s.p.statuspages.StatusPages - [32mNo handler found for status code 101 Switching Protocols for call: /hello
+[0;39m28-03-2025 16:31:29.215 [DefaultDispatcher-worker-9] TRACE io.ktor.websocket.WebSocket - [32mStarting default WebSocketSession(io.ktor.websocket.DefaultWebSocketSessionImpl@6094d14) with negotiated extensions: 
+[0;39m28-03-2025 16:31:29.216 [DefaultDispatcher-worker-3] TRACE io.ktor.websocket.WebSocket - [32mStarting WebSocket pinger coroutine with period 5000 ms and timeout 60000 ms
+[0;39m28-03-2025 16:31:29.216 [DefaultDispatcher-worker-9] TRACE io.ktor.server.websocket.WebSockets - [32mStarting websocket session for /hello
+[0;39m28-03-2025 16:31:29.216 [DefaultDispatcher-worker-9] TRACE io.ktor.websocket.WebSocket - [32mSending Frame TEXT (fin=true, buffer len = 5) from session io.ktor.websocket.DefaultWebSocketSessionImpl@6094d14
+[0;39m28-03-2025 16:31:29.218 [DefaultDispatcher-worker-4] TRACE io.ktor.websocket.WebSocket - [32mSending Frame CLOSE (fin=true, buffer len = 43) from session io.ktor.websocket.DefaultWebSocketSessionImpl@6094d14
+[0;39m28-03-2025 16:31:29.219 [DefaultDispatcher-worker-4] TRACE io.ktor.websocket.WebSocket - [32mSending Close Sequence for session io.ktor.websocket.DefaultWebSocketSessionImpl@6094d14 with reason CloseReason(reason=CLOSED_ABNORMALLY, message=Connection was closed without close frame) and exception null
+[0;39m28-03-2025 16:32:54.088 [DefaultDispatcher-worker-13] TRACE io.ktor.server.websocket.WebSockets - [32mShutdown WebSockets due to application stop
+[0;39m28-03-2025 16:33:00.242 [main] INFO  Application - [32mAutoreload is disabled because the development mode is off.
+[0;39m28-03-2025 16:33:00.411 [main] INFO  HTTPLogger - [32m+++++ Entrée +++++
+[0;39m28-03-2025 16:33:00.744 [main] INFO  Application - [32mApplication started in 0.823 seconds.
+[0;39m28-03-2025 16:33:00.806 [DefaultDispatcher-worker-5] INFO  Application - [32mResponding at http://127.0.0.1:8080
+[0;39m28-03-2025 16:33:08.574 [DefaultDispatcher-worker-4] TRACE io.ktor.server.routing.Routing - [32mTrace for [hello]
+/, segment:0 -> SUCCESS @ /
+  /hello, segment:1 -> SUCCESS @ /hello
+    /hello/(method:GET), segment:1 -> SUCCESS @ /hello/(method:GET)
+      /hello/(method:GET)/(header:Connection = Upgrade), segment:1 -> SUCCESS @ /hello/(method:GET)/(header:Connection = Upgrade)
+        /hello/(method:GET)/(header:Connection = Upgrade)/(header:Upgrade = websocket), segment:1 -> SUCCESS @ /hello/(method:GET)/(header:Connection = Upgrade)/(header:Upgrade = websocket)
+Matched routes:
+  "" -> "hello" -> "(method:GET)" -> "(header:Connection = Upgrade)" -> "(header:Upgrade = websocket)"
+Routing resolve result:
+  SUCCESS @ /hello/(method:GET)/(header:Connection = Upgrade)/(header:Upgrade = websocket)
+[0;39m28-03-2025 16:33:08.598 [DefaultDispatcher-worker-4] TRACE i.k.s.p.c.ContentNegotiation - [32mSkipping because body is already converted.
+[0;39m28-03-2025 16:33:08.600 [DefaultDispatcher-worker-4] TRACE i.k.s.p.statuspages.StatusPages - [32mNo handler found for status code 101 Switching Protocols for call: /hello
+[0;39m28-03-2025 16:33:08.623 [DefaultDispatcher-worker-4] TRACE io.ktor.websocket.WebSocket - [32mStarting default WebSocketSession(io.ktor.websocket.DefaultWebSocketSessionImpl@4f0fd068) with negotiated extensions: 
+[0;39m28-03-2025 16:33:08.626 [DefaultDispatcher-worker-2] TRACE io.ktor.websocket.WebSocket - [32mStarting WebSocket pinger coroutine with period 5000 ms and timeout 60000 ms
+[0;39m28-03-2025 16:33:08.629 [DefaultDispatcher-worker-4] TRACE io.ktor.server.websocket.WebSockets - [32mStarting websocket session for /hello
+[0;39m28-03-2025 16:33:08.631 [DefaultDispatcher-worker-4] TRACE io.ktor.websocket.WebSocket - [32mSending Frame TEXT (fin=true, buffer len = 5) from session io.ktor.websocket.DefaultWebSocketSessionImpl@4f0fd068
+[0;39m28-03-2025 16:33:08.642 [DefaultDispatcher-worker-1] TRACE io.ktor.websocket.WebSocket - [32mSending Frame CLOSE (fin=true, buffer len = 2) from session io.ktor.websocket.DefaultWebSocketSessionImpl@4f0fd068
+[0;39m28-03-2025 16:33:08.643 [DefaultDispatcher-worker-1] TRACE io.ktor.websocket.WebSocket - [32mSending Close Sequence for session io.ktor.websocket.DefaultWebSocketSessionImpl@4f0fd068 with reason CloseReason(reason=NORMAL, message=) and exception null
+[0;39m28-03-2025 16:36:04.605 [DefaultDispatcher-worker-1] TRACE io.ktor.server.websocket.WebSockets - [32mShutdown WebSockets due to application stop
+[0;39m28-03-2025 16:36:10.678 [main] INFO  Application - [32mAutoreload is disabled because the development mode is off.
+[0;39m28-03-2025 16:36:10.864 [main] INFO  HTTPLogger - [32m+++++ Entrée +++++
+[0;39m28-03-2025 16:36:11.171 [main] INFO  Application - [32mApplication started in 0.848 seconds.
+[0;39m28-03-2025 16:36:11.235 [DefaultDispatcher-worker-4] INFO  Application - [32mResponding at http://127.0.0.1:8080
+[0;39m28-03-2025 16:36:18.613 [DefaultDispatcher-worker-4] TRACE io.ktor.server.routing.Routing - [32mTrace for [hello]
+/, segment:0 -> SUCCESS @ /
+  /hello, segment:1 -> SUCCESS @ /hello
+    /hello/(method:GET), segment:1 -> SUCCESS @ /hello/(method:GET)
+      /hello/(method:GET)/(header:Connection = Upgrade), segment:1 -> SUCCESS @ /hello/(method:GET)/(header:Connection = Upgrade)
+        /hello/(method:GET)/(header:Connection = Upgrade)/(header:Upgrade = websocket), segment:1 -> SUCCESS @ /hello/(method:GET)/(header:Connection = Upgrade)/(header:Upgrade = websocket)
+Matched routes:
+  "" -> "hello" -> "(method:GET)" -> "(header:Connection = Upgrade)" -> "(header:Upgrade = websocket)"
+Routing resolve result:
+  SUCCESS @ /hello/(method:GET)/(header:Connection = Upgrade)/(header:Upgrade = websocket)
+[0;39m28-03-2025 16:36:18.634 [DefaultDispatcher-worker-4] TRACE i.k.s.p.c.ContentNegotiation - [32mSkipping because body is already converted.
+[0;39m28-03-2025 16:36:18.636 [DefaultDispatcher-worker-4] TRACE i.k.s.p.statuspages.StatusPages - [32mNo handler found for status code 101 Switching Protocols for call: /hello
+[0;39m28-03-2025 16:36:18.659 [DefaultDispatcher-worker-4] TRACE io.ktor.websocket.WebSocket - [32mStarting default WebSocketSession(io.ktor.websocket.DefaultWebSocketSessionImpl@58f9d8e9) with negotiated extensions: 
+[0;39m28-03-2025 16:36:18.662 [DefaultDispatcher-worker-6] TRACE io.ktor.websocket.WebSocket - [32mStarting WebSocket pinger coroutine with period 60000 ms and timeout 60000 ms
+[0;39m28-03-2025 16:36:18.666 [DefaultDispatcher-worker-4] TRACE io.ktor.server.websocket.WebSockets - [32mStarting websocket session for /hello
+[0;39m28-03-2025 16:36:18.668 [DefaultDispatcher-worker-4] TRACE io.ktor.websocket.WebSocket - [32mSending Frame TEXT (fin=true, buffer len = 5) from session io.ktor.websocket.DefaultWebSocketSessionImpl@58f9d8e9
+[0;39m28-03-2025 16:36:18.681 [DefaultDispatcher-worker-2] TRACE io.ktor.websocket.WebSocket - [32mSending Frame CLOSE (fin=true, buffer len = 43) from session io.ktor.websocket.DefaultWebSocketSessionImpl@58f9d8e9
+[0;39m28-03-2025 16:36:18.683 [DefaultDispatcher-worker-2] TRACE io.ktor.websocket.WebSocket - [32mSending Close Sequence for session io.ktor.websocket.DefaultWebSocketSessionImpl@58f9d8e9 with reason CloseReason(reason=CLOSED_ABNORMALLY, message=Connection was closed without close frame) and exception null
+[0;39m28-03-2025 16:37:08.738 [DefaultDispatcher-worker-5] TRACE io.ktor.server.websocket.WebSockets - [32mShutdown WebSockets due to application stop
+[0;39m28-03-2025 16:37:15.207 [main] INFO  Application - [32mAutoreload is disabled because the development mode is off.
+[0;39m28-03-2025 16:37:15.400 [main] INFO  HTTPLogger - [32m+++++ Entrée +++++
+[0;39m28-03-2025 16:37:15.707 [main] INFO  Application - [32mApplication started in 0.86 seconds.
+[0;39m28-03-2025 16:37:15.761 [DefaultDispatcher-worker-5] INFO  Application - [32mResponding at http://127.0.0.1:8080
+[0;39m28-03-2025 16:37:19.063 [DefaultDispatcher-worker-2] TRACE io.ktor.server.routing.Routing - [32mTrace for [hello]
+/, segment:0 -> SUCCESS @ /
+  /hello, segment:1 -> SUCCESS @ /hello
+    /hello/(method:GET), segment:1 -> SUCCESS @ /hello/(method:GET)
+      /hello/(method:GET)/(header:Connection = Upgrade), segment:1 -> SUCCESS @ /hello/(method:GET)/(header:Connection = Upgrade)
+        /hello/(method:GET)/(header:Connection = Upgrade)/(header:Upgrade = websocket), segment:1 -> SUCCESS @ /hello/(method:GET)/(header:Connection = Upgrade)/(header:Upgrade = websocket)
+Matched routes:
+  "" -> "hello" -> "(method:GET)" -> "(header:Connection = Upgrade)" -> "(header:Upgrade = websocket)"
+Routing resolve result:
+  SUCCESS @ /hello/(method:GET)/(header:Connection = Upgrade)/(header:Upgrade = websocket)
+[0;39m28-03-2025 16:37:19.100 [DefaultDispatcher-worker-2] TRACE i.k.s.p.c.ContentNegotiation - [32mSkipping because body is already converted.
+[0;39m28-03-2025 16:37:19.102 [DefaultDispatcher-worker-2] TRACE i.k.s.p.statuspages.StatusPages - [32mNo handler found for status code 101 Switching Protocols for call: /hello
+[0;39m28-03-2025 16:37:19.124 [DefaultDispatcher-worker-2] TRACE io.ktor.websocket.WebSocket - [32mStarting default WebSocketSession(io.ktor.websocket.DefaultWebSocketSessionImpl@57d99211) with negotiated extensions: 
+[0;39m28-03-2025 16:37:19.127 [DefaultDispatcher-worker-1] TRACE io.ktor.websocket.WebSocket - [32mStarting WebSocket pinger coroutine with period 60000 ms and timeout 600000 ms
+[0;39m28-03-2025 16:37:19.130 [DefaultDispatcher-worker-2] TRACE io.ktor.server.websocket.WebSockets - [32mStarting websocket session for /hello
+[0;39m28-03-2025 16:37:19.133 [DefaultDispatcher-worker-2] TRACE io.ktor.websocket.WebSocket - [32mSending Frame TEXT (fin=true, buffer len = 5) from session io.ktor.websocket.DefaultWebSocketSessionImpl@57d99211
+[0;39m28-03-2025 16:37:19.146 [DefaultDispatcher-worker-4] TRACE io.ktor.websocket.WebSocket - [32mSending Frame CLOSE (fin=true, buffer len = 43) from session io.ktor.websocket.DefaultWebSocketSessionImpl@57d99211
+[0;39m28-03-2025 16:37:19.148 [DefaultDispatcher-worker-4] TRACE io.ktor.websocket.WebSocket - [32mSending Close Sequence for session io.ktor.websocket.DefaultWebSocketSessionImpl@57d99211 with reason CloseReason(reason=CLOSED_ABNORMALLY, message=Connection was closed without close frame) and exception null
+[0;39m28-03-2025 16:38:37.959 [DefaultDispatcher-worker-2] TRACE io.ktor.server.websocket.WebSockets - [32mShutdown WebSockets due to application stop
+[0;39m28-03-2025 16:38:44.069 [main] INFO  Application - [32mAutoreload is disabled because the development mode is off.
+[0;39m28-03-2025 16:38:44.246 [main] INFO  HTTPLogger - [32m+++++ Entrée +++++
+[0;39m28-03-2025 16:38:44.552 [main] INFO  Application - [32mApplication started in 0.799 seconds.
+[0;39m28-03-2025 16:38:44.606 [DefaultDispatcher-worker-5] INFO  Application - [32mResponding at http://127.0.0.1:8080
+[0;39m28-03-2025 16:38:52.409 [DefaultDispatcher-worker-4] TRACE io.ktor.server.routing.Routing - [32mTrace for [hello]
+/, segment:0 -> SUCCESS @ /
+  /hello, segment:1 -> SUCCESS @ /hello
+    /hello/(method:GET), segment:1 -> SUCCESS @ /hello/(method:GET)
+      /hello/(method:GET)/(header:Connection = Upgrade), segment:1 -> SUCCESS @ /hello/(method:GET)/(header:Connection = Upgrade)
+        /hello/(method:GET)/(header:Connection = Upgrade)/(header:Upgrade = websocket), segment:1 -> SUCCESS @ /hello/(method:GET)/(header:Connection = Upgrade)/(header:Upgrade = websocket)
+Matched routes:
+  "" -> "hello" -> "(method:GET)" -> "(header:Connection = Upgrade)" -> "(header:Upgrade = websocket)"
+Routing resolve result:
+  SUCCESS @ /hello/(method:GET)/(header:Connection = Upgrade)/(header:Upgrade = websocket)
+[0;39m28-03-2025 16:38:52.431 [DefaultDispatcher-worker-4] TRACE i.k.s.p.c.ContentNegotiation - [32mSkipping because body is already converted.
+[0;39m28-03-2025 16:38:52.433 [DefaultDispatcher-worker-4] TRACE i.k.s.p.statuspages.StatusPages - [32mNo handler found for status code 101 Switching Protocols for call: /hello
+[0;39m28-03-2025 16:38:52.455 [DefaultDispatcher-worker-4] TRACE io.ktor.websocket.WebSocket - [32mStarting default WebSocketSession(io.ktor.websocket.DefaultWebSocketSessionImpl@3d3b7be1) with negotiated extensions: 
+[0;39m28-03-2025 16:38:52.459 [DefaultDispatcher-worker-3] TRACE io.ktor.websocket.WebSocket - [32mStarting WebSocket pinger coroutine with period 60000 ms and timeout 600000 ms
+[0;39m28-03-2025 16:38:52.462 [DefaultDispatcher-worker-4] TRACE io.ktor.server.websocket.WebSockets - [32mStarting websocket session for /hello
+[0;39m28-03-2025 16:38:52.465 [DefaultDispatcher-worker-4] TRACE io.ktor.websocket.WebSocket - [32mSending Frame TEXT (fin=true, buffer len = 5) from session io.ktor.websocket.DefaultWebSocketSessionImpl@3d3b7be1
+[0;39m28-03-2025 16:39:52.468 [DefaultDispatcher-worker-3] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: sending ping frame
+[0;39m28-03-2025 16:39:52.478 [DefaultDispatcher-worker-1] TRACE io.ktor.websocket.WebSocket - [32mWebSocketSession(StandaloneCoroutine{Active}@5cd78116) receiving frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 16:39:52.479 [DefaultDispatcher-worker-1] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: received valid pong frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 16:40:52.480 [DefaultDispatcher-worker-1] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: sending ping frame
+[0;39m28-03-2025 16:40:52.483 [DefaultDispatcher-worker-5] TRACE io.ktor.websocket.WebSocket - [32mWebSocketSession(StandaloneCoroutine{Active}@5cd78116) receiving frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 16:40:52.483 [DefaultDispatcher-worker-5] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: received valid pong frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 16:41:52.485 [DefaultDispatcher-worker-13] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: sending ping frame
+[0;39m28-03-2025 16:41:52.636 [DefaultDispatcher-worker-12] TRACE io.ktor.websocket.WebSocket - [32mWebSocketSession(StandaloneCoroutine{Active}@5cd78116) receiving frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 16:41:52.637 [DefaultDispatcher-worker-12] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: received valid pong frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 16:42:52.639 [DefaultDispatcher-worker-8] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: sending ping frame
+[0;39m28-03-2025 16:42:52.641 [DefaultDispatcher-worker-9] TRACE io.ktor.websocket.WebSocket - [32mWebSocketSession(StandaloneCoroutine{Active}@5cd78116) receiving frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 16:42:52.642 [DefaultDispatcher-worker-9] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: received valid pong frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 16:43:43.280 [DefaultDispatcher-worker-5] TRACE io.ktor.websocket.WebSocket - [32mWebSocketSession(StandaloneCoroutine{Active}@5cd78116) receiving frame Frame CLOSE (fin=true, buffer len = 2)
+[0;39m28-03-2025 16:43:43.286 [DefaultDispatcher-worker-5] TRACE io.ktor.websocket.WebSocket - [32mSending Frame CLOSE (fin=true, buffer len = 2) from session io.ktor.websocket.DefaultWebSocketSessionImpl@3d3b7be1
+[0;39m28-03-2025 16:43:43.287 [DefaultDispatcher-worker-5] TRACE io.ktor.websocket.WebSocket - [32mSending Close Sequence for session io.ktor.websocket.DefaultWebSocketSessionImpl@3d3b7be1 with reason CloseReason(reason=NORMAL, message=) and exception null
+[0;39m28-03-2025 17:07:35.054 [DefaultDispatcher-worker-5] TRACE io.ktor.server.websocket.WebSockets - [32mShutdown WebSockets due to application stop
+[0;39m28-03-2025 17:07:42.290 [main] INFO  Application - [32mAutoreload is disabled because the development mode is off.
+[0;39m28-03-2025 17:07:42.465 [main] INFO  HTTPLogger - [32m+++++ Entrée +++++
+[0;39m28-03-2025 17:07:42.787 [main] INFO  Application - [32mApplication started in 0.895 seconds.
+[0;39m28-03-2025 17:07:42.843 [DefaultDispatcher-worker-5] INFO  Application - [32mResponding at http://127.0.0.1:8080
+[0;39m28-03-2025 17:08:01.205 [DefaultDispatcher-worker-5] TRACE io.ktor.server.routing.Routing - [32mTrace for [echo]
+/, segment:0 -> SUCCESS @ /
+  /hello, segment:0 -> FAILURE "Selector didn't match" @ /hello
+  /echo, segment:1 -> SUCCESS @ /echo
+    /echo/(method:GET), segment:1 -> SUCCESS @ /echo/(method:GET)
+      /echo/(method:GET)/(header:Connection = Upgrade), segment:1 -> SUCCESS @ /echo/(method:GET)/(header:Connection = Upgrade)
+        /echo/(method:GET)/(header:Connection = Upgrade)/(header:Upgrade = websocket), segment:1 -> SUCCESS @ /echo/(method:GET)/(header:Connection = Upgrade)/(header:Upgrade = websocket)
+Matched routes:
+  "" -> "echo" -> "(method:GET)" -> "(header:Connection = Upgrade)" -> "(header:Upgrade = websocket)"
+Routing resolve result:
+  SUCCESS @ /echo/(method:GET)/(header:Connection = Upgrade)/(header:Upgrade = websocket)
+[0;39m28-03-2025 17:08:01.227 [DefaultDispatcher-worker-5] TRACE i.k.s.p.c.ContentNegotiation - [32mSkipping because body is already converted.
+[0;39m28-03-2025 17:08:01.229 [DefaultDispatcher-worker-5] TRACE i.k.s.p.statuspages.StatusPages - [32mNo handler found for status code 101 Switching Protocols for call: /echo
+[0;39m28-03-2025 17:08:01.252 [DefaultDispatcher-worker-5] TRACE io.ktor.websocket.WebSocket - [32mStarting default WebSocketSession(io.ktor.websocket.DefaultWebSocketSessionImpl@688edd4b) with negotiated extensions: 
+[0;39m28-03-2025 17:08:01.256 [DefaultDispatcher-worker-6] TRACE io.ktor.websocket.WebSocket - [32mStarting WebSocket pinger coroutine with period 60000 ms and timeout 600000 ms
+[0;39m28-03-2025 17:08:01.259 [DefaultDispatcher-worker-5] TRACE io.ktor.server.websocket.WebSockets - [32mStarting websocket session for /echo
+[0;39m28-03-2025 17:08:30.864 [DefaultDispatcher-worker-8] TRACE io.ktor.websocket.WebSocket - [32mWebSocketSession(StandaloneCoroutine{Active}@3f17e96f) receiving frame Frame CLOSE (fin=true, buffer len = 2)
+[0;39m28-03-2025 17:08:30.869 [DefaultDispatcher-worker-8] TRACE io.ktor.websocket.WebSocket - [32mSending Frame CLOSE (fin=true, buffer len = 2) from session io.ktor.websocket.DefaultWebSocketSessionImpl@688edd4b
+[0;39m28-03-2025 17:08:30.870 [DefaultDispatcher-worker-8] TRACE io.ktor.websocket.WebSocket - [32mSending Close Sequence for session io.ktor.websocket.DefaultWebSocketSessionImpl@688edd4b with reason CloseReason(reason=NORMAL, message=) and exception null
+[0;39m28-03-2025 17:08:40.877 [DefaultDispatcher-worker-2] TRACE io.ktor.server.websocket.WebSockets - [32mShutdown WebSockets due to application stop
+[0;39m28-03-2025 17:09:10.636 [main] INFO  Application - [32mAutoreload is disabled because the development mode is off.
+[0;39m28-03-2025 17:09:10.820 [main] INFO  HTTPLogger - [32m+++++ Entrée +++++
+[0;39m28-03-2025 17:09:11.146 [main] INFO  Application - [32mApplication started in 0.847 seconds.
+[0;39m28-03-2025 17:09:11.203 [DefaultDispatcher-worker-5] INFO  Application - [32mResponding at http://127.0.0.1:8080
+[0;39m28-03-2025 17:09:15.119 [DefaultDispatcher-worker-5] TRACE io.ktor.server.routing.Routing - [32mTrace for [echo]
+/, segment:0 -> SUCCESS @ /
+  /hello, segment:0 -> FAILURE "Selector didn't match" @ /hello
+  /echo, segment:1 -> SUCCESS @ /echo
+    /echo/(method:GET), segment:1 -> SUCCESS @ /echo/(method:GET)
+      /echo/(method:GET)/(header:Connection = Upgrade), segment:1 -> SUCCESS @ /echo/(method:GET)/(header:Connection = Upgrade)
+        /echo/(method:GET)/(header:Connection = Upgrade)/(header:Upgrade = websocket), segment:1 -> SUCCESS @ /echo/(method:GET)/(header:Connection = Upgrade)/(header:Upgrade = websocket)
+Matched routes:
+  "" -> "echo" -> "(method:GET)" -> "(header:Connection = Upgrade)" -> "(header:Upgrade = websocket)"
+Routing resolve result:
+  SUCCESS @ /echo/(method:GET)/(header:Connection = Upgrade)/(header:Upgrade = websocket)
+[0;39m28-03-2025 17:09:15.142 [DefaultDispatcher-worker-5] TRACE i.k.s.p.c.ContentNegotiation - [32mSkipping because body is already converted.
+[0;39m28-03-2025 17:09:15.144 [DefaultDispatcher-worker-5] TRACE i.k.s.p.statuspages.StatusPages - [32mNo handler found for status code 101 Switching Protocols for call: /echo
+[0;39m28-03-2025 17:09:15.169 [DefaultDispatcher-worker-5] TRACE io.ktor.websocket.WebSocket - [32mStarting default WebSocketSession(io.ktor.websocket.DefaultWebSocketSessionImpl@7542de24) with negotiated extensions: 
+[0;39m28-03-2025 17:09:15.172 [DefaultDispatcher-worker-4] TRACE io.ktor.websocket.WebSocket - [32mStarting WebSocket pinger coroutine with period 5000 ms and timeout 60000 ms
+[0;39m28-03-2025 17:09:15.175 [DefaultDispatcher-worker-5] TRACE io.ktor.server.websocket.WebSockets - [32mStarting websocket session for /echo
+[0;39m28-03-2025 17:09:20.180 [DefaultDispatcher-worker-5] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: sending ping frame
+[0;39m28-03-2025 17:09:20.194 [DefaultDispatcher-worker-8] TRACE io.ktor.websocket.WebSocket - [32mWebSocketSession(StandaloneCoroutine{Active}@5dbddbb0) receiving frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 17:09:20.194 [DefaultDispatcher-worker-8] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: received valid pong frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 17:09:25.197 [DefaultDispatcher-worker-5] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: sending ping frame
+[0;39m28-03-2025 17:09:25.200 [DefaultDispatcher-worker-1] TRACE io.ktor.websocket.WebSocket - [32mWebSocketSession(StandaloneCoroutine{Active}@5dbddbb0) receiving frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 17:09:25.200 [DefaultDispatcher-worker-1] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: received valid pong frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 17:09:30.202 [DefaultDispatcher-worker-3] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: sending ping frame
+[0;39m28-03-2025 17:09:30.205 [DefaultDispatcher-worker-2] TRACE io.ktor.websocket.WebSocket - [32mWebSocketSession(StandaloneCoroutine{Active}@5dbddbb0) receiving frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 17:09:30.206 [DefaultDispatcher-worker-2] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: received valid pong frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 17:09:35.208 [DefaultDispatcher-worker-6] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: sending ping frame
+[0;39m28-03-2025 17:09:35.212 [DefaultDispatcher-worker-4] TRACE io.ktor.websocket.WebSocket - [32mWebSocketSession(StandaloneCoroutine{Active}@5dbddbb0) receiving frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 17:09:35.213 [DefaultDispatcher-worker-4] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: received valid pong frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 17:09:38.365 [DefaultDispatcher-worker-9] TRACE io.ktor.websocket.WebSocket - [32mWebSocketSession(StandaloneCoroutine{Active}@5dbddbb0) receiving frame Frame CLOSE (fin=true, buffer len = 2)
+[0;39m28-03-2025 17:09:38.372 [DefaultDispatcher-worker-9] TRACE io.ktor.websocket.WebSocket - [32mSending Frame CLOSE (fin=true, buffer len = 2) from session io.ktor.websocket.DefaultWebSocketSessionImpl@7542de24
+[0;39m28-03-2025 17:09:38.373 [DefaultDispatcher-worker-9] TRACE io.ktor.websocket.WebSocket - [32mSending Close Sequence for session io.ktor.websocket.DefaultWebSocketSessionImpl@7542de24 with reason CloseReason(reason=NORMAL, message=) and exception null
+[0;39m28-03-2025 17:09:39.640 [DefaultDispatcher-worker-2] TRACE io.ktor.server.routing.Routing - [32mTrace for [echo]
+/, segment:0 -> SUCCESS @ /
+  /hello, segment:0 -> FAILURE "Selector didn't match" @ /hello
+  /echo, segment:1 -> SUCCESS @ /echo
+    /echo/(method:GET), segment:1 -> SUCCESS @ /echo/(method:GET)
+      /echo/(method:GET)/(header:Connection = Upgrade), segment:1 -> SUCCESS @ /echo/(method:GET)/(header:Connection = Upgrade)
+        /echo/(method:GET)/(header:Connection = Upgrade)/(header:Upgrade = websocket), segment:1 -> SUCCESS @ /echo/(method:GET)/(header:Connection = Upgrade)/(header:Upgrade = websocket)
+Matched routes:
+  "" -> "echo" -> "(method:GET)" -> "(header:Connection = Upgrade)" -> "(header:Upgrade = websocket)"
+Routing resolve result:
+  SUCCESS @ /echo/(method:GET)/(header:Connection = Upgrade)/(header:Upgrade = websocket)
+[0;39m28-03-2025 17:09:39.641 [DefaultDispatcher-worker-2] TRACE i.k.s.p.c.ContentNegotiation - [32mSkipping because body is already converted.
+[0;39m28-03-2025 17:09:39.641 [DefaultDispatcher-worker-2] TRACE i.k.s.p.statuspages.StatusPages - [32mNo handler found for status code 101 Switching Protocols for call: /echo
+[0;39m28-03-2025 17:09:39.642 [DefaultDispatcher-worker-2] TRACE io.ktor.websocket.WebSocket - [32mStarting default WebSocketSession(io.ktor.websocket.DefaultWebSocketSessionImpl@2135bdf3) with negotiated extensions: 
+[0;39m28-03-2025 17:09:39.642 [DefaultDispatcher-worker-15] TRACE io.ktor.websocket.WebSocket - [32mStarting WebSocket pinger coroutine with period 5000 ms and timeout 60000 ms
+[0;39m28-03-2025 17:09:39.642 [DefaultDispatcher-worker-2] TRACE io.ktor.server.websocket.WebSockets - [32mStarting websocket session for /echo
+[0;39m28-03-2025 17:09:44.644 [DefaultDispatcher-worker-6] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: sending ping frame
+[0;39m28-03-2025 17:09:44.647 [DefaultDispatcher-worker-11] TRACE io.ktor.websocket.WebSocket - [32mWebSocketSession(StandaloneCoroutine{Active}@1cd0d775) receiving frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 17:09:44.647 [DefaultDispatcher-worker-11] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: received valid pong frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 17:09:46.943 [DefaultDispatcher-worker-1] TRACE io.ktor.websocket.WebSocket - [32mSending Close Sequence for session io.ktor.websocket.DefaultWebSocketSessionImpl@2135bdf3 with reason CloseReason(reason=NORMAL, message=) and exception null
+[0;39m28-03-2025 17:09:46.945 [DefaultDispatcher-worker-5] TRACE i.k.s.p.statuspages.StatusPages - [32mCall /echo failed with cause kotlinx.coroutines.JobCancellationException: StandaloneCoroutine was cancelled; job=StandaloneCoroutine{Cancelling}@64686c8b
+[0;39m28-03-2025 17:09:46.946 [DefaultDispatcher-worker-5] TRACE i.k.s.p.statuspages.StatusPages - [32mNo handler found for exception: kotlinx.coroutines.JobCancellationException: StandaloneCoroutine was cancelled; job=StandaloneCoroutine{Cancelling}@64686c8b for call /echo
+[0;39m28-03-2025 17:09:46.946 [DefaultDispatcher-worker-12] TRACE io.ktor.server.websocket.WebSockets - [32mShutdown WebSockets due to application stop
+[0;39m28-03-2025 17:09:46.948 [DefaultDispatcher-worker-5] DEBUG Application - [32m101 Switching Protocols: GET - /echo. Exception class kotlinx.coroutines.JobCancellationException: StandaloneCoroutine was cancelled
+[0;39mkotlinx.coroutines.JobCancellationException: StandaloneCoroutine was cancelled
+28-03-2025 17:09:46.951 [DefaultDispatcher-worker-5] TRACE i.k.s.p.c.ContentNegotiation - [32mSkipping response body transformation from HttpStatusCode to OutgoingContent for the GET /echo request because the HttpStatusCode type is ignored. See [ContentNegotiationConfig::ignoreType].
+[0;39m28-03-2025 17:09:46.951 [DefaultDispatcher-worker-5] TRACE i.k.s.p.statuspages.StatusPages - [32mNo handler found for status code 500 Internal Server Error for call: /echo
+[0;39m28-03-2025 17:09:52.399 [main] INFO  Application - [32mAutoreload is disabled because the development mode is off.
+[0;39m28-03-2025 17:09:52.565 [main] INFO  HTTPLogger - [32m+++++ Entrée +++++
+[0;39m28-03-2025 17:09:52.882 [main] INFO  Application - [32mApplication started in 0.834 seconds.
+[0;39m28-03-2025 17:09:52.936 [DefaultDispatcher-worker-5] INFO  Application - [32mResponding at http://127.0.0.1:8080
+[0;39m28-03-2025 17:09:55.612 [DefaultDispatcher-worker-2] TRACE io.ktor.server.routing.Routing - [32mTrace for [echo]
+/, segment:0 -> SUCCESS @ /
+  /hello, segment:0 -> FAILURE "Selector didn't match" @ /hello
+  /echo, segment:1 -> SUCCESS @ /echo
+    /echo/(method:GET), segment:1 -> SUCCESS @ /echo/(method:GET)
+      /echo/(method:GET)/(header:Connection = Upgrade), segment:1 -> SUCCESS @ /echo/(method:GET)/(header:Connection = Upgrade)
+        /echo/(method:GET)/(header:Connection = Upgrade)/(header:Upgrade = websocket), segment:1 -> SUCCESS @ /echo/(method:GET)/(header:Connection = Upgrade)/(header:Upgrade = websocket)
+Matched routes:
+  "" -> "echo" -> "(method:GET)" -> "(header:Connection = Upgrade)" -> "(header:Upgrade = websocket)"
+Routing resolve result:
+  SUCCESS @ /echo/(method:GET)/(header:Connection = Upgrade)/(header:Upgrade = websocket)
+[0;39m28-03-2025 17:09:55.653 [DefaultDispatcher-worker-2] TRACE i.k.s.p.c.ContentNegotiation - [32mSkipping because body is already converted.
+[0;39m28-03-2025 17:09:55.654 [DefaultDispatcher-worker-2] TRACE i.k.s.p.statuspages.StatusPages - [32mNo handler found for status code 101 Switching Protocols for call: /echo
+[0;39m28-03-2025 17:09:55.678 [DefaultDispatcher-worker-2] TRACE io.ktor.websocket.WebSocket - [32mStarting default WebSocketSession(io.ktor.websocket.DefaultWebSocketSessionImpl@4c9859d9) with negotiated extensions: 
+[0;39m28-03-2025 17:09:55.681 [DefaultDispatcher-worker-6] TRACE io.ktor.websocket.WebSocket - [32mStarting WebSocket pinger coroutine with period 50000 ms and timeout 60000 ms
+[0;39m28-03-2025 17:09:55.684 [DefaultDispatcher-worker-2] TRACE io.ktor.server.websocket.WebSockets - [32mStarting websocket session for /echo
+[0;39m28-03-2025 17:10:45.690 [DefaultDispatcher-worker-1] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: sending ping frame
+[0;39m28-03-2025 17:10:45.702 [DefaultDispatcher-worker-6] TRACE io.ktor.websocket.WebSocket - [32mWebSocketSession(StandaloneCoroutine{Active}@196511d0) receiving frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 17:10:45.703 [DefaultDispatcher-worker-6] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: received valid pong frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 17:10:54.723 [DefaultDispatcher-worker-5] TRACE io.ktor.websocket.WebSocket - [32mSending Frame CLOSE (fin=true, buffer len = 43) from session io.ktor.websocket.DefaultWebSocketSessionImpl@4c9859d9
+[0;39m28-03-2025 17:10:54.724 [DefaultDispatcher-worker-5] TRACE io.ktor.websocket.WebSocket - [32mSending Close Sequence for session io.ktor.websocket.DefaultWebSocketSessionImpl@4c9859d9 with reason CloseReason(reason=CLOSED_ABNORMALLY, message=Connection was closed without close frame) and exception null
+[0;39m28-03-2025 17:10:54.727 [DefaultDispatcher-worker-6] TRACE i.k.s.p.statuspages.StatusPages - [32mCall /echo failed with cause kotlinx.coroutines.JobCancellationException: StandaloneCoroutine was cancelled; job=StandaloneCoroutine{Cancelling}@3179cce3
+[0;39m28-03-2025 17:10:54.728 [DefaultDispatcher-worker-5] TRACE io.ktor.server.websocket.WebSockets - [32mShutdown WebSockets due to application stop
+[0;39m28-03-2025 17:10:54.728 [DefaultDispatcher-worker-6] TRACE i.k.s.p.statuspages.StatusPages - [32mNo handler found for exception: kotlinx.coroutines.JobCancellationException: StandaloneCoroutine was cancelled; job=StandaloneCoroutine{Cancelling}@3179cce3 for call /echo
+[0;39m28-03-2025 17:10:54.731 [DefaultDispatcher-worker-6] DEBUG Application - [32m101 Switching Protocols: GET - /echo. Exception class kotlinx.coroutines.JobCancellationException: StandaloneCoroutine was cancelled
+[0;39mkotlinx.coroutines.JobCancellationException: StandaloneCoroutine was cancelled
+28-03-2025 17:10:54.734 [DefaultDispatcher-worker-6] TRACE i.k.s.p.c.ContentNegotiation - [32mSkipping response body transformation from HttpStatusCode to OutgoingContent for the GET /echo request because the HttpStatusCode type is ignored. See [ContentNegotiationConfig::ignoreType].
+[0;39m28-03-2025 17:10:54.735 [DefaultDispatcher-worker-6] TRACE i.k.s.p.statuspages.StatusPages - [32mNo handler found for status code 500 Internal Server Error for call: /echo
+[0;39m28-03-2025 17:18:18.769 [main] INFO  Application - [32mAutoreload is disabled because the development mode is off.
+[0;39m28-03-2025 17:18:18.953 [main] INFO  HTTPLogger - [32m+++++ Entrée +++++
+[0;39m28-03-2025 17:18:19.285 [main] INFO  Application - [32mApplication started in 0.844 seconds.
+[0;39m28-03-2025 17:18:19.339 [DefaultDispatcher-worker-5] INFO  Application - [32mResponding at http://127.0.0.1:8080
+[0;39m28-03-2025 17:18:21.733 [DefaultDispatcher-worker-1] TRACE io.ktor.server.routing.Routing - [32mTrace for [echo]
+/, segment:0 -> SUCCESS @ /
+  /hello, segment:0 -> FAILURE "Selector didn't match" @ /hello
+  /echo, segment:1 -> SUCCESS @ /echo
+    /echo/(method:GET), segment:1 -> SUCCESS @ /echo/(method:GET)
+      /echo/(method:GET)/(header:Connection = Upgrade), segment:1 -> SUCCESS @ /echo/(method:GET)/(header:Connection = Upgrade)
+        /echo/(method:GET)/(header:Connection = Upgrade)/(header:Upgrade = websocket), segment:1 -> SUCCESS @ /echo/(method:GET)/(header:Connection = Upgrade)/(header:Upgrade = websocket)
+Matched routes:
+  "" -> "echo" -> "(method:GET)" -> "(header:Connection = Upgrade)" -> "(header:Upgrade = websocket)"
+Routing resolve result:
+  SUCCESS @ /echo/(method:GET)/(header:Connection = Upgrade)/(header:Upgrade = websocket)
+[0;39m28-03-2025 17:18:21.755 [DefaultDispatcher-worker-1] TRACE i.k.s.p.c.ContentNegotiation - [32mSkipping because body is already converted.
+[0;39m28-03-2025 17:18:21.756 [DefaultDispatcher-worker-1] TRACE i.k.s.p.statuspages.StatusPages - [32mNo handler found for status code 101 Switching Protocols for call: /echo
+[0;39m28-03-2025 17:18:21.779 [DefaultDispatcher-worker-1] TRACE io.ktor.websocket.WebSocket - [32mStarting default WebSocketSession(io.ktor.websocket.DefaultWebSocketSessionImpl@7e70970e) with negotiated extensions: 
+[0;39m28-03-2025 17:18:21.782 [DefaultDispatcher-worker-7] TRACE io.ktor.websocket.WebSocket - [32mStarting WebSocket pinger coroutine with period 50000 ms and timeout 60000 ms
+[0;39m28-03-2025 17:18:21.785 [DefaultDispatcher-worker-1] TRACE io.ktor.server.websocket.WebSockets - [32mStarting websocket session for /echo
+[0;39m28-03-2025 17:19:11.790 [DefaultDispatcher-worker-7] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: sending ping frame
+[0;39m28-03-2025 17:19:11.800 [DefaultDispatcher-worker-5] TRACE io.ktor.websocket.WebSocket - [32mWebSocketSession(StandaloneCoroutine{Active}@77bea797) receiving frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 17:19:11.801 [DefaultDispatcher-worker-5] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: received valid pong frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 17:19:41.734 [DefaultDispatcher-worker-8] TRACE io.ktor.websocket.WebSocket - [32mWebSocketSession(StandaloneCoroutine{Active}@77bea797) receiving frame Frame TEXT (fin=true, buffer len = 17)
+[0;39m28-03-2025 17:19:41.737 [DefaultDispatcher-worker-8] TRACE io.ktor.websocket.WebSocket - [32mSending Frame TEXT (fin=true, buffer len = 17) from session io.ktor.websocket.DefaultWebSocketSessionImpl@7e70970e
+[0;39m28-03-2025 17:20:01.802 [DefaultDispatcher-worker-1] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: sending ping frame
+[0;39m28-03-2025 17:20:01.805 [DefaultDispatcher-worker-4] TRACE io.ktor.websocket.WebSocket - [32mWebSocketSession(StandaloneCoroutine{Active}@77bea797) receiving frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 17:20:01.805 [DefaultDispatcher-worker-4] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: received valid pong frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 17:20:51.253 [DefaultDispatcher-worker-6] TRACE io.ktor.websocket.WebSocket - [32mWebSocketSession(StandaloneCoroutine{Active}@77bea797) receiving frame Frame TEXT (fin=true, buffer len = 17)
+[0;39m28-03-2025 17:20:51.254 [DefaultDispatcher-worker-6] TRACE io.ktor.websocket.WebSocket - [32mSending Frame TEXT (fin=true, buffer len = 17) from session io.ktor.websocket.DefaultWebSocketSessionImpl@7e70970e
+[0;39m28-03-2025 17:20:51.807 [DefaultDispatcher-worker-7] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: sending ping frame
+[0;39m28-03-2025 17:20:51.809 [DefaultDispatcher-worker-9] TRACE io.ktor.websocket.WebSocket - [32mWebSocketSession(StandaloneCoroutine{Active}@77bea797) receiving frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 17:20:51.810 [DefaultDispatcher-worker-9] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: received valid pong frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 17:21:41.811 [DefaultDispatcher-worker-8] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: sending ping frame
+[0;39m28-03-2025 17:21:41.813 [DefaultDispatcher-worker-4] TRACE io.ktor.websocket.WebSocket - [32mWebSocketSession(StandaloneCoroutine{Active}@77bea797) receiving frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 17:21:41.814 [DefaultDispatcher-worker-4] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: received valid pong frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 17:22:29.179 [DefaultDispatcher-worker-6] TRACE io.ktor.websocket.WebSocket - [32mWebSocketSession(StandaloneCoroutine{Active}@77bea797) receiving frame Frame TEXT (fin=true, buffer len = 17)
+[0;39m28-03-2025 17:22:29.179 [DefaultDispatcher-worker-6] TRACE io.ktor.websocket.WebSocket - [32mSending Frame TEXT (fin=true, buffer len = 17) from session io.ktor.websocket.DefaultWebSocketSessionImpl@7e70970e
+[0;39m28-03-2025 17:22:31.815 [DefaultDispatcher-worker-1] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: sending ping frame
+[0;39m28-03-2025 17:22:31.817 [DefaultDispatcher-worker-2] TRACE io.ktor.websocket.WebSocket - [32mWebSocketSession(StandaloneCoroutine{Active}@77bea797) receiving frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 17:22:31.818 [DefaultDispatcher-worker-2] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: received valid pong frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 17:23:21.820 [DefaultDispatcher-worker-4] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: sending ping frame
+[0;39m28-03-2025 17:23:21.823 [DefaultDispatcher-worker-5] TRACE io.ktor.websocket.WebSocket - [32mWebSocketSession(StandaloneCoroutine{Active}@77bea797) receiving frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 17:23:21.823 [DefaultDispatcher-worker-5] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: received valid pong frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 17:23:36.533 [DefaultDispatcher-worker-3] TRACE io.ktor.websocket.WebSocket - [32mWebSocketSession(StandaloneCoroutine{Active}@77bea797) receiving frame Frame TEXT (fin=true, buffer len = 12)
+[0;39m28-03-2025 17:23:36.534 [DefaultDispatcher-worker-3] TRACE io.ktor.websocket.WebSocket - [32mSending Frame TEXT (fin=true, buffer len = 12) from session io.ktor.websocket.DefaultWebSocketSessionImpl@7e70970e
+[0;39m28-03-2025 17:23:52.747 [DefaultDispatcher-worker-7] TRACE io.ktor.websocket.WebSocket - [32mWebSocketSession(StandaloneCoroutine{Active}@77bea797) receiving frame Frame TEXT (fin=true, buffer len = 9)
+[0;39m28-03-2025 17:23:52.747 [DefaultDispatcher-worker-7] TRACE io.ktor.websocket.WebSocket - [32mSending Frame TEXT (fin=true, buffer len = 9) from session io.ktor.websocket.DefaultWebSocketSessionImpl@7e70970e
+[0;39m28-03-2025 17:24:11.825 [DefaultDispatcher-worker-10] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: sending ping frame
+[0;39m28-03-2025 17:24:11.827 [DefaultDispatcher-worker-2] TRACE io.ktor.websocket.WebSocket - [32mWebSocketSession(StandaloneCoroutine{Active}@77bea797) receiving frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 17:24:11.832 [DefaultDispatcher-worker-2] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: received valid pong frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 17:24:45.549 [DefaultDispatcher-worker-7] TRACE io.ktor.websocket.WebSocket - [32mWebSocketSession(StandaloneCoroutine{Active}@77bea797) receiving frame Frame CLOSE (fin=true, buffer len = 2)
+[0;39m28-03-2025 17:24:45.554 [DefaultDispatcher-worker-7] TRACE io.ktor.websocket.WebSocket - [32mSending Frame CLOSE (fin=true, buffer len = 2) from session io.ktor.websocket.DefaultWebSocketSessionImpl@7e70970e
+[0;39m28-03-2025 17:24:45.555 [DefaultDispatcher-worker-7] TRACE io.ktor.websocket.WebSocket - [32mSending Close Sequence for session io.ktor.websocket.DefaultWebSocketSessionImpl@7e70970e with reason CloseReason(reason=NORMAL, message=) and exception null
+[0;39m28-03-2025 17:24:47.569 [DefaultDispatcher-worker-3] TRACE io.ktor.server.websocket.WebSockets - [32mShutdown WebSockets due to application stop
+[0;39m28-03-2025 17:25:16.168 [main] INFO  Application - [32mAutoreload is disabled because the development mode is off.
+[0;39m28-03-2025 17:25:16.354 [main] INFO  HTTPLogger - [32m+++++ Entrée +++++
+[0;39m28-03-2025 17:25:16.836 [main] INFO  Application - [32mApplication started in 1.04 seconds.
+[0;39m28-03-2025 17:25:16.893 [DefaultDispatcher-worker-5] INFO  Application - [32mResponding at http://127.0.0.1:8080
+[0;39m28-03-2025 17:25:21.917 [DefaultDispatcher-worker-5] TRACE io.ktor.server.routing.Routing - [32mTrace for [hello]
+/, segment:0 -> SUCCESS @ /
+  /hello1, segment:0 -> FAILURE "Selector didn't match" @ /hello1
+  /echo, segment:0 -> FAILURE "Selector didn't match" @ /echo
+  /hello, segment:1 -> SUCCESS @ /hello
+    /hello/(method:GET), segment:1 -> SUCCESS @ /hello/(method:GET)
+      /hello/(method:GET)/(header:Connection = Upgrade), segment:1 -> SUCCESS @ /hello/(method:GET)/(header:Connection = Upgrade)
+        /hello/(method:GET)/(header:Connection = Upgrade)/(header:Upgrade = websocket), segment:1 -> SUCCESS @ /hello/(method:GET)/(header:Connection = Upgrade)/(header:Upgrade = websocket)
+Matched routes:
+  "" -> "hello" -> "(method:GET)" -> "(header:Connection = Upgrade)" -> "(header:Upgrade = websocket)"
+Routing resolve result:
+  SUCCESS @ /hello/(method:GET)/(header:Connection = Upgrade)/(header:Upgrade = websocket)
+[0;39m28-03-2025 17:25:21.939 [DefaultDispatcher-worker-5] TRACE i.k.s.p.c.ContentNegotiation - [32mSkipping because body is already converted.
+[0;39m28-03-2025 17:25:21.941 [DefaultDispatcher-worker-5] TRACE i.k.s.p.statuspages.StatusPages - [32mNo handler found for status code 101 Switching Protocols for call: /hello
+[0;39m28-03-2025 17:25:21.965 [DefaultDispatcher-worker-5] TRACE io.ktor.websocket.WebSocket - [32mStarting default WebSocketSession(io.ktor.websocket.DefaultWebSocketSessionImpl@50d3542c) with negotiated extensions: 
+[0;39m28-03-2025 17:25:21.968 [DefaultDispatcher-worker-4] TRACE io.ktor.websocket.WebSocket - [32mStarting WebSocket pinger coroutine with period 50000 ms and timeout 60000 ms
+[0;39m28-03-2025 17:25:21.972 [DefaultDispatcher-worker-5] TRACE io.ktor.server.websocket.WebSockets - [32mStarting websocket session for /hello
+[0;39m28-03-2025 17:25:21.974 [DefaultDispatcher-worker-5] TRACE io.ktor.websocket.WebSocket - [32mSending Frame TEXT (fin=true, buffer len = 5) from session io.ktor.websocket.DefaultWebSocketSessionImpl@50d3542c
+[0;39m28-03-2025 17:25:35.834 [DefaultDispatcher-worker-5] TRACE io.ktor.websocket.WebSocket - [32mWebSocketSession(StandaloneCoroutine{Active}@54048bde) receiving frame Frame TEXT (fin=true, buffer len = 9)
+[0;39m28-03-2025 17:25:35.837 [DefaultDispatcher-worker-5] TRACE io.ktor.websocket.WebSocket - [32mSending Frame TEXT (fin=true, buffer len = 17) from session io.ktor.websocket.DefaultWebSocketSessionImpl@50d3542c
+[0;39m28-03-2025 17:25:51.958 [DefaultDispatcher-worker-7] TRACE io.ktor.websocket.WebSocket - [32mWebSocketSession(StandaloneCoroutine{Active}@54048bde) receiving frame Frame TEXT (fin=true, buffer len = 13)
+[0;39m28-03-2025 17:25:51.958 [DefaultDispatcher-worker-7] TRACE io.ktor.websocket.WebSocket - [32mSending Frame TEXT (fin=true, buffer len = 21) from session io.ktor.websocket.DefaultWebSocketSessionImpl@50d3542c
+[0;39m28-03-2025 17:26:11.978 [DefaultDispatcher-worker-1] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: sending ping frame
+[0;39m28-03-2025 17:26:11.981 [DefaultDispatcher-worker-7] TRACE io.ktor.websocket.WebSocket - [32mWebSocketSession(StandaloneCoroutine{Active}@54048bde) receiving frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 17:26:11.982 [DefaultDispatcher-worker-7] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: received valid pong frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 17:26:29.291 [DefaultDispatcher-worker-6] TRACE io.ktor.websocket.WebSocket - [32mWebSocketSession(StandaloneCoroutine{Active}@54048bde) receiving frame Frame TEXT (fin=true, buffer len = 7)
+[0;39m28-03-2025 17:26:29.291 [DefaultDispatcher-worker-6] TRACE io.ktor.websocket.WebSocket - [32mSending Frame TEXT (fin=true, buffer len = 15) from session io.ktor.websocket.DefaultWebSocketSessionImpl@50d3542c
+[0;39m28-03-2025 17:27:00.437 [DefaultDispatcher-worker-2] TRACE io.ktor.websocket.WebSocket - [32mWebSocketSession(StandaloneCoroutine{Active}@54048bde) receiving frame Frame CLOSE (fin=true, buffer len = 2)
+[0;39m28-03-2025 17:27:00.445 [DefaultDispatcher-worker-2] TRACE io.ktor.websocket.WebSocket - [32mSending Frame CLOSE (fin=true, buffer len = 2) from session io.ktor.websocket.DefaultWebSocketSessionImpl@50d3542c
+[0;39m28-03-2025 17:27:00.446 [DefaultDispatcher-worker-2] TRACE io.ktor.websocket.WebSocket - [32mSending Close Sequence for session io.ktor.websocket.DefaultWebSocketSessionImpl@50d3542c with reason CloseReason(reason=NORMAL, message=) and exception null
+[0;39m28-03-2025 17:27:41.111 [DefaultDispatcher-worker-11] TRACE io.ktor.server.websocket.WebSockets - [32mShutdown WebSockets due to application stop
+[0;39m28-03-2025 17:27:47.637 [main] INFO  Application - [32mAutoreload is disabled because the development mode is off.
+[0;39m28-03-2025 17:27:47.824 [main] INFO  HTTPLogger - [32m+++++ Entrée +++++
+[0;39m28-03-2025 17:27:48.132 [main] INFO  Application - [32mApplication started in 0.828 seconds.
+[0;39m28-03-2025 17:27:48.187 [DefaultDispatcher-worker-5] INFO  Application - [32mResponding at http://127.0.0.1:8080
+[0;39m28-03-2025 17:27:51.216 [DefaultDispatcher-worker-2] TRACE io.ktor.server.routing.Routing - [32mTrace for [hello]
+/, segment:0 -> SUCCESS @ /
+  /hello1, segment:0 -> FAILURE "Selector didn't match" @ /hello1
+  /echo, segment:0 -> FAILURE "Selector didn't match" @ /echo
+  /hello, segment:1 -> SUCCESS @ /hello
+    /hello/(method:GET), segment:1 -> SUCCESS @ /hello/(method:GET)
+      /hello/(method:GET)/(header:Connection = Upgrade), segment:1 -> SUCCESS @ /hello/(method:GET)/(header:Connection = Upgrade)
+        /hello/(method:GET)/(header:Connection = Upgrade)/(header:Upgrade = websocket), segment:1 -> SUCCESS @ /hello/(method:GET)/(header:Connection = Upgrade)/(header:Upgrade = websocket)
+Matched routes:
+  "" -> "hello" -> "(method:GET)" -> "(header:Connection = Upgrade)" -> "(header:Upgrade = websocket)"
+Routing resolve result:
+  SUCCESS @ /hello/(method:GET)/(header:Connection = Upgrade)/(header:Upgrade = websocket)
+[0;39m28-03-2025 17:27:51.238 [DefaultDispatcher-worker-2] TRACE i.k.s.p.c.ContentNegotiation - [32mSkipping because body is already converted.
+[0;39m28-03-2025 17:27:51.240 [DefaultDispatcher-worker-2] TRACE i.k.s.p.statuspages.StatusPages - [32mNo handler found for status code 101 Switching Protocols for call: /hello
+[0;39m28-03-2025 17:27:51.265 [DefaultDispatcher-worker-2] TRACE io.ktor.websocket.WebSocket - [32mStarting default WebSocketSession(io.ktor.websocket.DefaultWebSocketSessionImpl@328aac6a) with negotiated extensions: 
+[0;39m28-03-2025 17:27:51.267 [DefaultDispatcher-worker-1] TRACE io.ktor.websocket.WebSocket - [32mStarting WebSocket pinger coroutine with period 50000 ms and timeout 60000 ms
+[0;39m28-03-2025 17:27:51.272 [DefaultDispatcher-worker-2] TRACE io.ktor.server.websocket.WebSockets - [32mStarting websocket session for /hello
+[0;39m28-03-2025 17:27:51.275 [DefaultDispatcher-worker-2] TRACE io.ktor.websocket.WebSocket - [32mSending Frame TEXT (fin=true, buffer len = 5) from session io.ktor.websocket.DefaultWebSocketSessionImpl@328aac6a
+[0;39m28-03-2025 17:27:58.380 [DefaultDispatcher-worker-5] TRACE io.ktor.websocket.WebSocket - [32mWebSocketSession(StandaloneCoroutine{Active}@1837872a) receiving frame Frame TEXT (fin=true, buffer len = 7)
+[0;39m28-03-2025 17:27:58.383 [DefaultDispatcher-worker-5] TRACE io.ktor.websocket.WebSocket - [32mSending Frame TEXT (fin=true, buffer len = 15) from session io.ktor.websocket.DefaultWebSocketSessionImpl@328aac6a
+[0;39m28-03-2025 17:28:15.430 [DefaultDispatcher-worker-4] TRACE io.ktor.websocket.WebSocket - [32mWebSocketSession(StandaloneCoroutine{Active}@1837872a) receiving frame Frame TEXT (fin=true, buffer len = 6)
+[0;39m28-03-2025 17:28:15.430 [DefaultDispatcher-worker-4] TRACE io.ktor.websocket.WebSocket - [32mSending Frame TEXT (fin=true, buffer len = 12) from session io.ktor.websocket.DefaultWebSocketSessionImpl@328aac6a
+[0;39m28-03-2025 17:28:41.277 [DefaultDispatcher-worker-10] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: sending ping frame
+[0;39m28-03-2025 17:28:41.280 [DefaultDispatcher-worker-6] TRACE io.ktor.websocket.WebSocket - [32mWebSocketSession(StandaloneCoroutine{Active}@1837872a) receiving frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 17:28:41.281 [DefaultDispatcher-worker-6] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: received valid pong frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 17:29:31.282 [DefaultDispatcher-worker-4] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: sending ping frame
+[0;39m28-03-2025 17:29:31.284 [DefaultDispatcher-worker-7] TRACE io.ktor.websocket.WebSocket - [32mWebSocketSession(StandaloneCoroutine{Active}@1837872a) receiving frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 17:29:31.285 [DefaultDispatcher-worker-7] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: received valid pong frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 17:30:21.287 [DefaultDispatcher-worker-1] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: sending ping frame
+[0;39m28-03-2025 17:30:21.290 [DefaultDispatcher-worker-10] TRACE io.ktor.websocket.WebSocket - [32mWebSocketSession(StandaloneCoroutine{Active}@1837872a) receiving frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 17:30:21.290 [DefaultDispatcher-worker-10] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: received valid pong frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 17:31:11.291 [DefaultDispatcher-worker-2] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: sending ping frame
+[0;39m28-03-2025 17:31:11.293 [DefaultDispatcher-worker-11] TRACE io.ktor.websocket.WebSocket - [32mWebSocketSession(StandaloneCoroutine{Active}@1837872a) receiving frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 17:31:11.294 [DefaultDispatcher-worker-11] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: received valid pong frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 17:32:01.296 [DefaultDispatcher-worker-6] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: sending ping frame
+[0;39m28-03-2025 17:32:01.298 [DefaultDispatcher-worker-4] TRACE io.ktor.websocket.WebSocket - [32mWebSocketSession(StandaloneCoroutine{Active}@1837872a) receiving frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 17:32:01.299 [DefaultDispatcher-worker-4] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: received valid pong frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 17:32:51.300 [DefaultDispatcher-worker-6] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: sending ping frame
+[0;39m28-03-2025 17:32:51.302 [DefaultDispatcher-worker-5] TRACE io.ktor.websocket.WebSocket - [32mWebSocketSession(StandaloneCoroutine{Active}@1837872a) receiving frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 17:32:51.303 [DefaultDispatcher-worker-5] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: received valid pong frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 17:33:41.305 [DefaultDispatcher-worker-4] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: sending ping frame
+[0;39m28-03-2025 17:33:41.307 [DefaultDispatcher-worker-10] TRACE io.ktor.websocket.WebSocket - [32mWebSocketSession(StandaloneCoroutine{Active}@1837872a) receiving frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 17:33:41.307 [DefaultDispatcher-worker-10] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: received valid pong frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 17:34:31.310 [DefaultDispatcher-worker-11] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: sending ping frame
+[0;39m28-03-2025 17:34:31.313 [DefaultDispatcher-worker-6] TRACE io.ktor.websocket.WebSocket - [32mWebSocketSession(StandaloneCoroutine{Active}@1837872a) receiving frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 17:34:31.313 [DefaultDispatcher-worker-6] TRACE io.ktor.websocket.WebSocket - [32mWebSocket Pinger: received valid pong frame Frame PONG (fin=true, buffer len = 76)
+[0;39m28-03-2025 17:34:44.513 [DefaultDispatcher-worker-2] TRACE io.ktor.websocket.WebSocket - [32mWebSocketSession(StandaloneCoroutine{Active}@1837872a) receiving frame Frame CLOSE (fin=true, buffer len = 2)
+[0;39m28-03-2025 17:34:44.518 [DefaultDispatcher-worker-2] TRACE io.ktor.websocket.WebSocket - [32mSending Frame CLOSE (fin=true, buffer len = 2) from session io.ktor.websocket.DefaultWebSocketSessionImpl@328aac6a
+[0;39m28-03-2025 17:34:44.519 [DefaultDispatcher-worker-2] TRACE io.ktor.websocket.WebSocket - [32mSending Close Sequence for session io.ktor.websocket.DefaultWebSocketSessionImpl@328aac6a with reason CloseReason(reason=NORMAL, message=) and exception null
+[0;39m28-03-2025 17:34:47.102 [DefaultDispatcher-worker-7] TRACE io.ktor.server.websocket.WebSockets - [32mShutdown WebSockets due to application stop
 [0;39m
