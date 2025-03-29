@@ -28,3 +28,13 @@ fun authenticateUser(username: String, password: String): String {
         .withClaim("username", username)
         .sign(Algorithm.HMAC256("hamtec57"))
 }
+
+/**
+ * *Je ne l'est pas mis a la bonne place. Provisoire!
+ */
+fun genToken(){
+    val token = JWT.create()
+        .withClaim("role", "admin")
+        .sign(Algorithm.HMAC256("hamtec57"))
+    println(token)
+}

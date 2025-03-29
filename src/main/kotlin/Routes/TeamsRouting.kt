@@ -6,25 +6,17 @@ import fr.hamtec.FileHeadlog.logHeaders
 import fr.hamtec.FileHeadlog.logResponseHeaders
 import fr.hamtec.data.Team
 import fr.hamtec.data.UserCredentials
-import fr.hamtec.genToken
 import fr.hamtec.jwtSecret
-import fr.hamtec.utils.authenticateUser
 import io.ktor.http.*
-import io.ktor.http.HttpHeaders.Date
 import io.ktor.server.application.*
 import io.ktor.server.auth.*
 import io.ktor.server.auth.jwt.*
-import io.ktor.server.html.*
 import io.ktor.server.http.content.*
 import io.ktor.server.request.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
-import kotlinx.html.body
-import kotlinx.html.h1
-import kotlinx.html.head
-import kotlinx.html.title
 import java.io.File
-import java.util.Date
+import java.util.*
 
 
 fun Application.configureTeamsRouting() {
