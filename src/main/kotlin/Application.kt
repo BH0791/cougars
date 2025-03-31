@@ -8,6 +8,7 @@ import io.ktor.server.application.*
 import io.ktor.server.cio.*
 import kotlinx.coroutines.launch
 
+//* https://github.com/cdimascio/dotenv-kotlin
 val dotenv = Dotenv.load()
 val jwtSecret: String = dotenv["JWT_SECRET"] ?: "defaut_secret"
 
