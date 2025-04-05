@@ -22,7 +22,11 @@ object Teams : IntIdTable("teams") {
     val firstName: Column<String?> = varchar("firstName", 58).nullable()
 
     init {
-        name.charLength().greater(3)
+        check {
+            name.charLength().greater(3)
+            name.isNotNull()        //*--<--<
+
+        }
         index(
             customIndexName = "team_custom_id_index",
             isUnique = true,
