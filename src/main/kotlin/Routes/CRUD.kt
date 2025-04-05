@@ -1,5 +1,7 @@
 package fr.hamtec.Routes
 
+import fr.hamtec.data.Players
+import fr.hamtec.data.Players.teamId
 import fr.hamtec.data.Teams
 import io.ktor.server.application.*
 import io.ktor.server.html.*
@@ -7,11 +9,9 @@ import io.ktor.server.response.*
 import io.ktor.server.routing.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import kotlinx.html.body
-import kotlinx.html.h1
-import kotlinx.html.li
-import kotlinx.html.ul
+import kotlinx.html.*
 import org.jetbrains.exposed.sql.ResultRow
+import org.jetbrains.exposed.sql.insert
 import org.jetbrains.exposed.sql.selectAll
 import org.jetbrains.exposed.sql.transactions.transaction
 
@@ -66,6 +66,26 @@ fun Application.configureCRUD() {
                 }
             }
 
+        }
+        get("/ResultRowSlice") {
+            val selectedTeams = transaction {
+                Teams.selectAll().map { row ->
+                    val id = row[Teams.id].value
+                    val name = row[Teams.name]
+                    println("ID: $id, Nom: $name")
+                }
+            }
+
+        }
+        get ("/insertplayer"){
+            transaction {
+                Players.insert {
+                    it[id] = 101 // ID défini manuellement
+                    it[firstName] = "Alice"
+                    it[teamId] = 1
+
+                }
+            }
         }
     }
 }
