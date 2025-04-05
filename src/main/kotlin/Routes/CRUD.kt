@@ -36,5 +36,16 @@ fun Application.configureCRUD(){
                 }
             }
         }
+        get("/ResuleRowFinaly"){
+            transaction{
+                val teams: List<ResultRow> = Teams.selectAll().toList()
+                for (row in teams) {
+                    val id = row[Teams.id]
+                    val name = row[Teams.name]
+                    val firstName = row[Teams.firstName]
+                    println("ID: $id | Nom: $name | Responsable: $firstName")
+                }
+            }
+        }
     }
 }
