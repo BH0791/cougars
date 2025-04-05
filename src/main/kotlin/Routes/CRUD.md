@@ -1,3 +1,4 @@
+# Utiliser l'API DSL
 La classe **ResultRow** est au cœur de la façon dont **Exposed** représente chaque ligne renvoyée par une requête SQL. Elle permet d'accéder facilement aux colonnes de la table et de manipuler les données.
 
 Voici quelques points essentiels sur **ResultRow** et son lien avec **Table** :
