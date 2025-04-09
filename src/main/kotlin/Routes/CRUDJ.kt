@@ -21,6 +21,7 @@ import kotlinx.html.th
 import kotlinx.html.title
 import kotlinx.html.tr
 import org.jetbrains.exposed.sql.JoinType
+import org.jetbrains.exposed.sql.ResultRow
 import org.jetbrains.exposed.sql.SqlExpressionBuilder.isNotNull
 import org.jetbrains.exposed.sql.SqlExpressionBuilder.like
 import org.jetbrains.exposed.sql.and
@@ -68,9 +69,46 @@ fun Application.configureHtmlDslRoute() {
                 }
             }
         }
+        get("/affiche/teams") {
+            withContext(Dispatchers.IO){
+
+                val result = transaction {
+                    Teams.select(Teams.id, Teams.name)
+                        .toList()
+
+                }
+                call.respondHtml{
+                    head {
+                        title { +"Résultats de la Jointure" }
+                    }
+                    body {
+                        style = "width: 100%; text-align: center;"
+                        h1 { +"Résultats de la Jointure INNER entre Teams et Players" }
+                        if (result.isNotEmpty()) {
+                            table {
+                                style = "border-block:  1px dashed blue; border-spacing: 5px; width: 100%; text-align: center;"
+                                tr {
+                                    th { +"Player ID" }
+                                    th { +"Team Name" }
+                                }
+                                result.forEach { row ->
+                                    tr {
+                                        td { +row[Teams.id].toString() }
+                                        td { +row[Teams.name]!! }
+                                    }
+                                }
+                            }
+                        } else {
+                            p { +"Aucun résultat trouvé." }
+                        }
+                    }
+                }
+
+            }
+        }
         get("/jointuresInnerExplicite") {
             withContext(Dispatchers.IO) {
-                val result = transaction {
+                val result: List<ResultRow> = transaction {
                     Teams.join(
                         otherTable = Players,
                         joinType = JoinType.INNER,
