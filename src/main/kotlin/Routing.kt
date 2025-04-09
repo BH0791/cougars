@@ -1,10 +1,10 @@
 package fr.hamtec
 
-import fr.hamtec.Routes.configDBRoute
-import fr.hamtec.Routes.configureCRUD
+import fr.hamtec.Routes.configureHtmlDslRoute
 import io.ktor.server.application.*
 
 fun Application.configureRouting() {
     //configDBRoute()
-    configureCRUD()
+    //configureCRUD()
+    configureHtmlDslRoute()
 }
