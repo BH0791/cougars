@@ -2,12 +2,25 @@ package fr.hamtec.Routes
 
 import fr.hamtec.data.Players
 import fr.hamtec.data.Teams
-import io.ktor.server.application.*
-import io.ktor.server.response.*
-import io.ktor.server.routing.*
+import io.ktor.server.application.Application
+import io.ktor.server.html.respondHtml
+import io.ktor.server.response.respond
+import io.ktor.server.routing.get
+import io.ktor.server.routing.routing
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import kotlinx.html.body
+import kotlinx.html.h1
+import kotlinx.html.head
+import kotlinx.html.p
+import kotlinx.html.style
+import kotlinx.html.table
+import kotlinx.html.td
+import kotlinx.html.th
+import kotlinx.html.title
+import kotlinx.html.tr
+import org.jetbrains.exposed.sql.JoinType
 import org.jetbrains.exposed.sql.SqlExpressionBuilder.isNotNull
 import org.jetbrains.exposed.sql.SqlExpressionBuilder.like
 import org.jetbrains.exposed.sql.and
@@ -35,7 +48,7 @@ fun Application.configureHtmlDslRoute() {
                 }
             }
         }
-        get("/jointuresInner") {
+        get("/jointuresInnerImplicite") {
             transaction {
                 val result = (Teams innerJoin Players)
                     .select(Teams.name, Players.id, Players.firstName) // Spécifie les colonnes nécessaires
@@ -52,6 +65,49 @@ fun Application.configureHtmlDslRoute() {
                     println("Premier joueur ID : $firstPlayerId")
                 } else {
                     println("Aucun résultat trouvé.")
+                }
+            }
+        }
+        get("/jointuresInnerExplicite") {
+            withContext(Dispatchers.IO) {
+                val result = transaction {
+                    Teams.join(
+                        otherTable = Players,
+                        joinType = JoinType.INNER,
+                        onColumn = Teams.id,
+                        otherColumn = Players.teamId
+                    )
+                        .select(Players.id, Players.firstName, Teams.name)
+                        .toList()
+                }
+
+                // Génération de la réponse HTML avec HTML DSL
+                call.respondHtml {
+                    head {
+                        title { +"Résultats de la Jointure" }
+                    }
+                    body {
+                        h1 { +"Résultats de la Jointure INNER entre Teams et Players" }
+                        if (result.isNotEmpty()) {
+                            table {
+                                style = "border-collapse: collapse; width: 100%; text-align: left;"
+                                tr {
+                                    th { +"Player ID" }
+                                    th { +"First Name" }
+                                    th { +"Team Name" }
+                                }
+                                result.forEach { row ->
+                                    tr {
+                                        td { +row[Players.id].toString() }
+                                        td { +row[Players.firstName]!! }
+                                        td { +row[Teams.name]!! }
+                                    }
+                                }
+                            }
+                        } else {
+                            p { +"Aucun résultat trouvé." }
+                        }
+                    }
                 }
             }
         }
