@@ -1,5 +1,6 @@
 package fr.hamtec.Routes
 
+import fr.hamtec.FileHeadlog.logger
 import fr.hamtec.data.Players
 import fr.hamtec.data.Teams
 import io.ktor.server.application.Application
@@ -7,6 +8,7 @@ import io.ktor.server.html.respondHtml
 import io.ktor.server.response.respond
 import io.ktor.server.routing.get
 import io.ktor.server.routing.routing
+import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -27,6 +29,7 @@ import org.jetbrains.exposed.sql.SqlExpressionBuilder.like
 import org.jetbrains.exposed.sql.and
 import org.jetbrains.exposed.sql.selectAll
 import org.jetbrains.exposed.sql.transactions.transaction
+
 
 fun Application.configureHtmlDslRoute() {
     routing {
@@ -71,11 +74,11 @@ fun Application.configureHtmlDslRoute() {
         }
         get("/affiche/teams") {
             withContext(Dispatchers.IO){
-
+                //+Afficher le nom du withContext
+                logger.info("Contexte courant : ${coroutineContext[CoroutineDispatcher]}")
                 val result = transaction {
                     Teams.select(Teams.id, Teams.name)
                         .toList()
-
                 }
                 call.respondHtml{
                     head {
