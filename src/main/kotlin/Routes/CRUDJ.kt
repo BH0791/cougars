@@ -13,12 +13,15 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import kotlinx.html.body
+import kotlinx.html.form
 import kotlinx.html.h1
 import kotlinx.html.head
 import kotlinx.html.p
 import kotlinx.html.style
+import kotlinx.html.submitInput
 import kotlinx.html.table
 import kotlinx.html.td
+import kotlinx.html.textInput
 import kotlinx.html.th
 import kotlinx.html.title
 import kotlinx.html.tr
@@ -27,6 +30,7 @@ import org.jetbrains.exposed.sql.ResultRow
 import org.jetbrains.exposed.sql.SqlExpressionBuilder.isNotNull
 import org.jetbrains.exposed.sql.SqlExpressionBuilder.like
 import org.jetbrains.exposed.sql.and
+import org.jetbrains.exposed.sql.insertAndGetId
 import org.jetbrains.exposed.sql.selectAll
 import org.jetbrains.exposed.sql.transactions.transaction
 
@@ -201,6 +205,41 @@ fun Application.configureHtmlDslRoute() {
                     }
                 }
             }
+        }
+        get("/nouveau") {
+            call.respondHtml {
+                head { title { +"nouveau" } }
+                body {
+                    form(action = "/insert") {
+                        p {+"name"}
+                        p {textInput(name = "name")}
+                        p {+"firstName"}
+                        p {textInput(name = "firstName")}
+                        p {submitInput() { value = "Valider" }}
+                    }
+                }
+            }
+        }
+        get("/insert") {
+            val pays: String? = call.queryParameters["name"]
+            val habs: String? = call.queryParameters["firstName"]
+
+            val teams = withContext(Dispatchers.IO) {
+                transaction {
+                    val teams = Teams.insertAndGetId {
+                        it[name] = pays
+                        it[firstName] = habs
+                    }
+                }
+            }
+            call.respondHtml {
+                head { title { +"Valide" } }
+                body {
+                    p { +"Les valeurs [$pays] - [$habs] sont validées." }
+                }
+            }
+
+
         }
     }
 }
