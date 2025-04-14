@@ -1,0 +1,27 @@
+form {
+    font-weight: bold;
+    color: green;
+    padding: 10px; /* Ajoute de l'espace interne */
+    background-color: lightyellow; /* Couleur de fond */
+    border: 1px solid black; /* Bordure fine */
+    position:relative;
+    width: 300px;
+    height: 250px;
+    margin: 0 auto;
+}
+
+input:focus,
+    textarea:focus {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    outline: none;
+}
+
+body {
+  font: 21px sans-serif;
+
+  padding: 2em;
+  margin: 0;
+
+  background: #222;
+}

@@ -5,6 +5,7 @@ import fr.hamtec.data.Players
 import fr.hamtec.data.Teams
 import io.ktor.server.application.Application
 import io.ktor.server.html.respondHtml
+import io.ktor.server.http.content.staticFiles
 import io.ktor.server.response.respond
 import io.ktor.server.routing.get
 import io.ktor.server.routing.routing
@@ -16,6 +17,7 @@ import kotlinx.html.body
 import kotlinx.html.form
 import kotlinx.html.h1
 import kotlinx.html.head
+import kotlinx.html.link
 import kotlinx.html.p
 import kotlinx.html.style
 import kotlinx.html.submitInput
@@ -33,10 +35,13 @@ import org.jetbrains.exposed.sql.and
 import org.jetbrains.exposed.sql.insertAndGetId
 import org.jetbrains.exposed.sql.selectAll
 import org.jetbrains.exposed.sql.transactions.transaction
+import java.io.File
 
 
 fun Application.configureHtmlDslRoute() {
     routing {
+        staticFiles("/stylesCSS", File("src/main/resources/stylesCSS"))
+
         get("/jointures") {
             transaction {
                 val result = (Teams innerJoin Players)
@@ -208,7 +213,14 @@ fun Application.configureHtmlDslRoute() {
         }
         get("/nouveau") {
             call.respondHtml {
-                head { title { +"nouveau" } }
+                head {
+                    title { +"nouveau" }
+                    link {
+                        rel = "stylesheet"
+                        href = "/stylesCSS/style_1.css"
+                        type = "text/css"
+                    }
+                }
                 body {
                     form(action = "/insert") {
                         p {+"name"}
@@ -233,7 +245,10 @@ fun Application.configureHtmlDslRoute() {
                 }
             }
             call.respondHtml {
-                head { title { +"Valide" } }
+                head {
+                    title { +"Valide" }
+
+                }
                 body {
                     p { +"Les valeurs [$pays] - [$habs] sont validées." }
                 }
